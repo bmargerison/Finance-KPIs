@@ -29,7 +29,9 @@ axs[0,1].set_yticklabels(['50k', '100k', '150k', '200k', '250k'])
 axs[0,1].set_title('MRR & User Numbers')
 MRR_data_plot.plot(ax=axs[0,1], linewidth=5)
 
+#plot second axis on ax[0,1]
 ax2 = axs[0,1].twinx()
+ax2.set_ylim([0,250])
 user_numbers_plot.plot.bar(ax=ax2)
 
 print(user_numbers_plot)
