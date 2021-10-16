@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt
 
@@ -20,7 +19,7 @@ user_numbers_table = user_numbers.swapaxes('index','columns')
 axs[0,0].set_yticks([50000, 100000, 150000, 200000, 250000])
 axs[0,0].set_yticklabels(['50k', '100k', '150k', '200k', '250k'])
 axs[0,0].set_title('Monthly Revenue CY vs. PYs')
-colors = ['skyblue','wheat','lightgreen','salmon']
+colors = ['skyblue','wheat','lightgreen','lightsalmon']
 MRR_data_plot.plot.bar(ax=axs[0,0], color=colors, width=0.9, linewidth=20, label="hi")
 
 #plot ax[0,1]
@@ -30,15 +29,10 @@ axs[0,1].set_title('MRR & User Numbers')
 MRR_data_plot.plot(ax=axs[0,1], linewidth=3, color=colors)
 axs[0,1].get_legend().remove()
 
-
 #plot second axis on ax[0,1]
 ax2 = axs[0,1].twinx()
 ax2.set_ylim([0,250])
-colors2 = ['wheat','lightgreen','salmon']
+colors2 = ['wheat','lightgreen','lightsalmon']
 user_numbers_table.plot.bar(ax=ax2, color=colors2).legend(loc='upper center')
 
-
-
-print(MRR_data_plot)
-print(user_numbers_table)
 plt.show()
