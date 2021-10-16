@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd 
 import matplotlib.pyplot as plt
-import seaborn
 
 #import KPI dashboard
 dashboard = pd.read_excel('C:\\Users\\Ben\\Documents\\git\\Finance-KPIs\\MRR data.xlsx', index_col=0)
